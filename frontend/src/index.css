@@ -1,1 +1,39 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: "Montserrat Italic";
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url("/fonts/Montserrat-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat Regular";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("/fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat Medium Italic";
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url("/fonts/Montserrat-MediumItalic.ttf") format("truetype");
+}
+
+@layer components {
+    .font-montserratItalic {
+        font-family: "Montserrat Italic", ui-sans-serif, system-ui, sans-serif;
+    }
+
+    .font-montserratRegular {
+        font-family: "Montserrat Regular", ui-sans-serif, system-ui, sans-serif;
+    }
+
+    .font-montserratMediumItalic {
+        font-family: "Montserrat Medium Italic", ui-sans-serif, system-ui, sans-serif;
+    }
+}
