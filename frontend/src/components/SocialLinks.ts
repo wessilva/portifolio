@@ -13,7 +13,7 @@ export const socialLinks: SocialLink[] = [
         href: "https://www.linkedin.com/in/wesley-silva-468642245/",
         icon: FaLinkedin,
         title: "LinkedIn",
-        hoverColor: "hover:text-blue-500"
+        hoverColor: "hover:text-blue-500 scale-110"
     },
     {
         href: "https://github.com/wessilva",

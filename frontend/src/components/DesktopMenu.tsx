@@ -5,12 +5,12 @@ export const DesktopMenu = () => (
         {socialLinks.map((link, index) => {
             const IconComponent = link.icon;
             return (
-                <li key={index}>
+                <li key={index} className="transition-transform duration-300 hover:scale-110">
                     <a
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`text-white ${link.hoverColor} transition-colors`}
+                        className={`text-white ${link.hoverColor} transition-colors `}
                     >
                         <IconComponent
                             size={30}
