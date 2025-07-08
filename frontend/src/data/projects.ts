@@ -32,8 +32,8 @@ export const projects: Project[] = [
             { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
             { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
         ],
-        githubUrl: 'https://github.com/user/projeto',
-        liveUrl: 'https://projeto.vercel.app'
+        githubUrl: 'https://github.com/wessilva/igniteteams',
+        liveUrl: '#'
     },
     {
         id: '2',
@@ -47,7 +47,7 @@ export const projects: Project[] = [
 
         ],
         githubUrl: 'https://github.com/user/projeto',
-        liveUrl: 'https://projeto.vercel.app'
+        liveUrl: '#'
     },
 
 

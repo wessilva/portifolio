@@ -27,10 +27,17 @@ interface CardProjectProps {
 export const CardProject = ({ project, onClick }: CardProjectProps) => {
     const [isHovered, setIsHovered] = useState(false);
 
+
+    const handleClick = (e: React.MouseEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (onClick) {
+            onClick(project);
+        }
+    };
     return (
         <div
-            className="w-64 h-90 bg-[#787b8f] p-2 rounded-lg cursor-pointer hover:bg-[#8a8da0] transition-all duration-150 hover:scale-102"
-            onClick={() => onClick?.(project)}
+            className="w-64 h-100 bg-[#787b8f]  p-2 rounded-lg  hover:bg-[#8a8da0] transition-all duration-150 hover:scale-102"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
@@ -38,8 +45,7 @@ export const CardProject = ({ project, onClick }: CardProjectProps) => {
                 <img
                     src={project.image}
                     alt={`Imagem do projeto ${project.title}`}
-                    className={`w-full h-full object-cover rounded-lg transition-all duration-300 ${isHovered ? 'scale-105' : 'scale-100'
-                        }`}
+                    className={`w-full h-full object-cover rounded-lg transition-all duration-300`}
                 />
             </div>
 
@@ -74,6 +80,14 @@ export const CardProject = ({ project, onClick }: CardProjectProps) => {
                     </div>
                 )}
             </div>
+            <a
+                href='#'
+                className='hover:text-blue-500 text-white     mt-2 transition-all duration-300'
+                onClick={handleClick}
+            >
+                Ver mais...
+
+            </a>
         </div>
     );
 };
