@@ -11,9 +11,9 @@ export const Navbar = () => {
     };
 
     return (
-        <nav className="bg-[#000000]/50 p-5 relative">
+        <nav className="bg-[#000000]/50 p-5 relative shadow-2xl shadow-white/15 backdrop-blur-md z-50">
             <div className="mx-auto flex justify-between items-center">
-                <div className="text-white text-2xl md:text-3xl font-montserratItalic">Wesley Silva</div>
+                <div className="text-white text-2xl md:text-3xl font-montserratItalic">Wess Dev</div>
 
                 <DesktopMenu />
                 <MobileMenuButton isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />

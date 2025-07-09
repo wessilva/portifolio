@@ -1,28 +1,8 @@
 
 import { useState } from 'react';
 
+import type { CardProjectProps } from '../types';
 
-
-interface Technology {
-    name: string;
-    icon: React.ComponentType<{ className?: string }>;
-    color?: string;
-}
-
-interface Project {
-    id: string;
-    title: string;
-    description: string;
-    image: string;
-    technologies: Technology[];
-    githubUrl?: string;
-    liveUrl?: string;
-}
-
-interface CardProjectProps {
-    project: Project;
-    onClick?: (project: Project) => void;
-}
 
 export const CardProject = ({ project, onClick }: CardProjectProps) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -46,6 +26,7 @@ export const CardProject = ({ project, onClick }: CardProjectProps) => {
                     src={project.image}
                     alt={`Imagem do projeto ${project.title}`}
                     className={`w-full h-full object-cover rounded-lg transition-all duration-300`}
+                    loading='lazy'
                 />
             </div>
 
@@ -58,7 +39,7 @@ export const CardProject = ({ project, onClick }: CardProjectProps) => {
             </p>
 
             <div className="flex justify-center gap-5 w-full h-15 p-1 mt-2">
-                {project.technologies.slice(0, 4).map((tech, index) => {
+                {project.technologies.slice(0, 3).map((tech, index) => {
                     const IconComponent = tech.icon;
                     return (
                         <div

@@ -1,27 +1,12 @@
+import { isValidUrl } from '@/utils/validation';
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { FaTimes, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
-interface Technology {
-    name: string;
-    icon: React.ComponentType<{ className?: string }>;
-    color?: string;
-}
+import type { ProjectModalProps } from '../types';
 
-interface Project {
-    id: string;
-    title: string;
-    description: string;
-    image: string;
-    technologies: Technology[];
-    githubUrl?: string;
-    liveUrl?: string;
-}
 
-interface ProjectModalProps {
-    project: Project;
-    onClose: () => void;
-}
+
 
 export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
     useEffect(() => {
@@ -54,7 +39,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
             onClick={handleBackdropClick}
         >
-            <div className="relative bg-[#1b1c2f] rounded-lg max-w-lg w-full mx-4 h-[90vh] overflow-y-auto">
+            <div className="relative bg-[#1b1c2f] rounded-lg max-w-lg w-full mx-4 h-[95vh] overflow-y-auto">
                 <button
                     onClick={onClose}
                     className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
@@ -103,7 +88,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                     </div>
 
                     <div className="flex gap-5 mt-10 ">
-                        {project.githubUrl && (
+                        {isValidUrl(project.githubUrl) && (
                             <a
                                 href={project.githubUrl}
                                 target="_blank"
@@ -114,7 +99,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                                 <span className="text-white text-sm">GitHub</span>
                             </a>
                         )}
-                        {project.liveUrl && (
+                        {isValidUrl(project.liveUrl) && (
                             <a
                                 href={project.liveUrl}
                                 target="_blank"

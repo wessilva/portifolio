@@ -1,9 +1,6 @@
 import { FaAddressBook, FaTimes } from 'react-icons/fa';
 
-interface MobileMenuButtonProps {
-    isMenuOpen: boolean;
-    toggleMenu: () => void;
-}
+import type { MobileMenuButtonProps } from '../types';
 
 export const MobileMenuButton = ({ isMenuOpen, toggleMenu }: MobileMenuButtonProps) => (
     <button

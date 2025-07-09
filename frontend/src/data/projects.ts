@@ -1,25 +1,17 @@
 import {
     SiReact,
     SiTypescript,
-
+    SiVite,
     SiTailwindcss,
+    SiRedux,
+    SiExpo,
+    SiGithub
+
 } from 'react-icons/si';
 
-interface Technology {
-    name: string;
-    icon: React.ComponentType<{ className?: string }>;
-    color?: string;
-}
+import type { Project } from '../types'
 
-interface Project {
-    id: string;
-    title: string;
-    description: string;
-    image: string;
-    technologies: Technology[];
-    githubUrl: string;
-    liveUrl: string;
-}
+
 
 export const projects: Project[] = [
     {
@@ -31,19 +23,24 @@ export const projects: Project[] = [
             { name: 'React Native', icon: SiReact, color: '#61DAFB' },
             { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
             { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
+            { name: 'Redux', icon: SiRedux, color: '#61DAFB' },
+            { name: 'Expo', icon: SiExpo, color: '#61DAFB' },
+            { name: 'Github', icon: SiGithub, color: '#61DAFB' }
         ],
         githubUrl: 'https://github.com/wessilva/igniteteams',
         liveUrl: '#'
     },
     {
         id: '2',
-        title: 'Portifólio Pessoal',
+        title: 'Portfólio Pessoal',
         description: 'Este projeto é um portfólio pessoal desenvolvido para apresentar minhas habilidades e projetos de forma atraente e funcional.',
         image: '/portifolio1.png',
         technologies: [
             { name: 'React', icon: SiReact, color: '#61DAFB' },
             { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
             { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
+            { name: 'Vite', icon: SiVite, color: '#61DAFB' },
+            { name: 'GitHub', icon: SiGithub, color: '#61DAFB' }
 
         ],
         githubUrl: 'https://github.com/user/projeto',

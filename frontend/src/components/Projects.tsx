@@ -3,19 +3,7 @@ import { CardProject } from "./CardProject"
 import { ProjectModal } from "./ProjectModal"
 import { projects } from "../data/projects"
 
-interface Project {
-    id: string;
-    title: string;
-    description: string;
-    image: string;
-    technologies: Array<{
-        name: string;
-        icon: React.ComponentType<{ className?: string }>;
-        color?: string;
-    }>;
-    githubUrl?: string;
-    liveUrl?: string;
-}
+import type { Project } from '../types';
 
 export const Projects = () => {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
