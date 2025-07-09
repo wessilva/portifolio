@@ -17,7 +17,7 @@ export const CardProject = ({ project, onClick }: CardProjectProps) => {
     };
     return (
         <div
-            className="w-64 h-100 bg-[#787b8f]  p-2 rounded-lg  hover:bg-[#8a8da0] transition-all duration-150 hover:scale-102"
+            className="w-64 h-100 bg-[#787b8f]  p-2 rounded-lg  hover:bg-[#8a8da0] transition-all duration-500 hover:scale-102"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >

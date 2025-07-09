@@ -42,7 +42,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             <div className="relative bg-[#1b1c2f] rounded-lg max-w-lg w-full mx-4 h-[95vh] overflow-y-auto">
                 <button
                     onClick={onClose}
-                    className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+                    className="absolute top-4 right-4 text-white hover:text-gray-300 cursor-pointer transition-colors z-10"
                     aria-label="Fechar modal"
                 >
                     <FaTimes size={24} />
